@@ -7,9 +7,10 @@
   <style>
     :root {
       --primary-color: #2e5b43;
-      --accent-color: #4CAF50;
+      --secondary-color: #4CAF50;
       --bg-color: #ffffff;
-      --text-color: #1f3b2c;
+      --light-section: #f3f8f5;
+      --text-color: #1a3d2d;
     }
 
     body {
@@ -21,7 +22,7 @@
       font-size: 1.15rem;
     }
 
-    /* HEADER NAV */
+    /* HEADER */
     header {
       background-color: #ffffff;
       border-bottom: 1px solid #ddd;
@@ -35,15 +36,22 @@
       margin: 0 auto;
       padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
-      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
     }
 
     nav a {
+      margin-left: 1.5rem;
       text-decoration: none;
       color: var(--primary-color);
-      font-weight: 600;
-      font-size: 1.05rem;
+      font-weight: 500;
       transition: color 0.3s;
     }
 
@@ -54,21 +62,15 @@
 
     /* HERO SECTION */
     .hero {
+      background-color: var(--light-section);
       text-align: center;
-      padding: 4rem 2rem 3rem;
-      background-color: #e8f4ec;
-    }
-
-    .hero img {
-      max-width: 220px;
-      height: auto;
-      margin-bottom: 1.5rem;
+      padding: 5rem 2rem 4rem;
     }
 
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
       color: var(--primary-color);
-      margin-bottom: 0.5rem;
     }
 
     .hero p {
@@ -78,43 +80,61 @@
       color: #3b6b50;
     }
 
-    /* ABOUT SECTION */
-    .about {
+    /* SECTIONS */
+    section {
       max-width: 960px;
       margin: 3rem auto;
       padding: 2rem;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    .about h2 {
+    section h2 {
+      font-size: 2rem;
       color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
+      border-bottom: 2px solid var(--secondary-color);
       padding-bottom: 0.3rem;
       margin-top: 0;
-      font-size: 2rem;
     }
 
-    .about p {
+    section p {
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
 
-    /* IMAGE GRID */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 0 2rem;
+    /* RESEARCH THEMES */
+    .themes {
+      background-color: var(--light-section);
+      padding: 4rem 2rem;
     }
 
-    .image-grid img {
-      width: 100%;
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .theme-card {
+      background-color: #ffffff;
       border-radius: 8px;
+      padding: 1.5rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .theme-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .theme-card h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+      font-size: 1.4rem;
+    }
+
+    .theme-card p {
+      font-size: 1.05rem;
+      color: #333;
     }
 
     footer {
@@ -129,7 +149,7 @@
       display: inline-block;
       margin-top: 1.5rem;
       padding: 0.6rem 1.2rem;
-      background-color: var(--accent-color);
+      background-color: var(--secondary-color);
       color: white;
       text-decoration: none;
       border-radius: 4px;
@@ -145,6 +165,7 @@
 <body>
   <header>
     <div class="header-container">
+      <a href="index.html" class="brand">Nature × Matter</a>
       <nav>
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
@@ -157,30 +178,44 @@
   </header>
 
   <section class="hero">
-    <img src="nature-x-matter-logo.png" alt="Nature × Matter logo">
     <h1>Welcome to Nature × Matter</h1>
     <p>
       Enabling nature-inspired solutions for challenges in health, sustainability, and the environment.
     </p>
   </section>
 
-  <section class="about">
-    <h2>Our Mission</h2>
+  <section>
+    <h2>About Our Lab</h2>
     <p>
       Nature × Matter bridges chemistry, biology, and materials science to design dynamic, sustainable solutions. Led by Hamideh Rezvani Alanagh, our work focuses on creating materials that respond, adapt, and support life in meaningful ways.
     </p>
     <p>
       We study biomolecular assemblies, engineer responsive scaffolds, and apply advanced characterization to understand and control soft matter systems. From therapeutics and diagnostics to sustainable agriculture and water treatment, we believe that learning from nature enables us to build a better future.
     </p>
-    <p>
-      <a class="button" href="research.html">Explore Our Research</a>
-    </p>
   </section>
 
-  <section class="image-grid">
-    <img src="YOUR-IMAGE-1.jpg" alt="Research Highlight 1">
-    <img src="YOUR-IMAGE-2.jpg" alt="Research Highlight 2">
-    <img src="YOUR-IMAGE-3.jpg" alt="Research Highlight 3">
+  <section class="themes">
+    <h2>Research Focus</h2>
+    <div class="theme-grid">
+      <div class="theme-card">
+        <h3>Nature-Inspired Biomaterials</h3>
+        <p>
+          Designing dynamic scaffolds and coacervates for drug delivery, gene regulation, and synthetic tissues.
+        </p>
+      </div>
+      <div class="theme-card">
+        <h3>Self-Assembled Soft Matter</h3>
+        <p>
+          Exploring phase separation, liquid crystals, and condensates to mimic biological compartmentalization.
+        </p>
+      </div>
+      <div class="theme-card">
+        <h3>Sustainable Nanotechnologies</h3>
+        <p>
+          Developing eco-friendly nanomaterials for agriculture, micronutrient delivery, and water remediation.
+        </p>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -188,6 +223,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
