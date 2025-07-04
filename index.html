@@ -4,68 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nature × Matter - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #fefcf8;
-      --primary-color: #2e5b43;
-      --secondary-color: #3b6b50;
-      --accent-color: #4CAF50;
-      --text-color: #1f3b2c;
-    }
-
     body {
       margin: 0;
-      font-family: 'Merriweather Sans', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefcf8;
+      color: #1f3b2c;
       line-height: 1.6;
     }
 
     header {
-      background-color: var(--bg-color);
-      border-bottom: 1px solid #ddd;
+      background-color: #fefcf8;
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 1rem;
     }
 
     header h1 {
       font-size: 1.8rem;
       margin: 0;
-      color: var(--primary-color);
+      color: #1a3d2d;
+    }
+
+    nav {
+      margin-left: auto;
     }
 
     nav a {
-      margin-left: 1rem;
+      margin-left: 1.5rem;
       text-decoration: none;
-      color: var(--primary-color);
-      font-weight: 600;
+      color: #1a3d2d;
+      font-weight: 500;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: var(--secondary-color);
+      color: #3b6b50;
       text-decoration: underline;
     }
 
     section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 2rem;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: auto;
     }
 
     h2 {
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
+      color: #2e5b43;
+      border-bottom: 2px solid #4CAF50;
       padding-bottom: 0.3rem;
     }
 
     footer {
       text-align: center;
-      background-color: #f3f3ed;
       padding: 2rem;
+      background-color: #f3f3ed;
       font-size: 0.9rem;
       color: #444;
     }
@@ -74,7 +73,7 @@
       display: inline-block;
       margin-top: 1rem;
       padding: 0.5rem 1rem;
-      background-color: var(--accent-color);
+      background-color: #4CAF50;
       color: white;
       text-decoration: none;
       border-radius: 4px;
@@ -88,6 +87,7 @@
 </head>
 <body>
   <header>
+    <img src="nature-x-matter-logo.png" alt="Nature × Matter logo">
     <h1>Nature × Matter</h1>
     <nav>
       <a href="index.html">Home</a>
@@ -117,5 +117,6 @@
   </footer>
 </body>
 </html>
+
 
 
