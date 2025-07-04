@@ -14,24 +14,30 @@
       font-size: 1.05rem;
     }
 
+    /* HEADER */
     header {
-      background-color: #fefcf8;
-      padding: 1rem 2rem;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.5rem 2rem;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid #ddd;
+      justify-content: space-between;
     }
 
     header img {
-      height: 100px;
-    }
-
-    nav {
-      margin-left: auto;
+      height: 80px;
     }
 
     nav a {
-      margin-left: 1.5rem;
+      margin-left: 1.2rem;
       text-decoration: none;
       color: #1a3d2d;
       font-weight: 500;
@@ -43,26 +49,54 @@
       text-decoration: underline;
     }
 
-    section {
-      padding: 3rem 2rem;
+    /* HERO SECTION */
+    .hero {
+      background-color: #e8f4ec;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #2e5b43;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #3b6b50;
+    }
+
+    /* ABOUT SECTION */
+    .about {
       max-width: 960px;
-      margin: auto;
+      margin: 3rem auto;
+      padding: 2rem;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    h2 {
+    .about h2 {
       color: #2e5b43;
       border-bottom: 2px solid #4CAF50;
       padding-bottom: 0.3rem;
       margin-top: 0;
     }
 
-    p {
+    .about p {
       margin-top: 1rem;
       margin-bottom: 1rem;
-      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f3f3ed;
+      font-size: 0.9rem;
+      color: #444;
     }
 
     a.button {
@@ -80,36 +114,37 @@
     a.button:hover {
       background-color: #388e3c;
     }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f3f3ed;
-      font-size: 0.9rem;
-      color: #444;
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src="nature-x-matter-logo.png" alt="Nature × Matter logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="outreach.html">Outreach / EDI</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="header-container">
+      <img src="nature-x-matter-logo.png" alt="Nature × Matter logo">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="outreach.html">Outreach / EDI</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="home">
-    <h2>Welcome</h2>
+  <section class="hero">
+    <h1>Welcome to Nature × Matter</h1>
     <p>
-      Nature × Matter explores how biological principles can inspire new materials that respond, regenerate, and sustain life. Led by Hamideh Rezvani Alanagh, our work bridges chemistry, soft matter physics, and sustainability-driven biomaterials design.
+      Exploring nature-inspired materials to address challenges in health, sustainability, and the environment.
+    </p>
+  </section>
+
+  <section class="about">
+    <h2>Our Mission</h2>
+    <p>
+      Nature × Matter bridges chemistry, biology, and materials science to design dynamic, sustainable solutions. Led by Hamideh Rezvani Alanagh, our work focuses on creating materials that respond, adapt, and support life in meaningful ways.
     </p>
     <p>
-      We believe science should not only explain the world, but help build it in better, more sustainable ways. Our interdisciplinary approach combines chemistry, materials science, and biophysics to design responsive materials for health, agriculture, and environmental solutions.
+      We study biomolecular assemblies, engineer responsive scaffolds, and apply advanced characterization to understand and control soft matter systems. From therapeutics and diagnostics to sustainable agriculture and water treatment, we believe that learning from nature enables us to build a better future.
     </p>
     <p>
       <a class="button" href="research.html">Explore Our Research</a>
@@ -121,6 +156,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
