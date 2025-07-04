@@ -48,6 +48,43 @@
       font-size: 0.9rem;
       color: #444;
     }
+
+    /* New styles for research section */
+    details {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      background-color: #fff;
+    }
+    details summary {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      color: #1a3d2d;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 2px 8px;
+      margin: 2px;
+      border-radius: 12px;
+      font-size: 0.85em;
+    }
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 2rem;
+    }
+    .tech-card {
+      flex: 1 1 200px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -71,7 +108,87 @@
 
   <section id="research">
     <h2>Research</h2>
-    <p>Our projects include protein coacervates, biomimetic interface design, and dynamic scaffolds for environmental and biomedical applications.</p>
+    <p>
+      My research bridges chemistry, biology, and materials science to design nature-inspired materials for health and environmental challenges. I integrate synthetic chemistry, biophysical methods, and imaging to understand and create functional materials.
+    </p>
+
+    <details>
+      <summary>🌿 Nature-Inspired Biomaterials</summary>
+      <p>
+        <strong>Keywords:</strong>
+        <span class="badge">Biomineralization</span>
+        <span class="badge">Mussel-Inspired</span>
+        <span class="badge">Coacervates</span>
+        <span class="badge">Protein-DNA</span><br>
+        <strong>Applications:</strong> Synthetic tissues, drug delivery, gene regulation.<br>
+        <strong>Techniques:</strong> Raman, FRAP, Optical Tweezers, Cryo-EM, NMR.<br>
+        We study how biological systems use weak interactions and sequence-encoded disorder to create dynamic, tunable materials for targeted delivery and tissue engineering.
+      </p>
+    </details>
+
+    <details>
+      <summary>💧 Self-Assembled Soft Matter</summary>
+      <p>
+        <strong>Keywords:</strong>
+        <span class="badge">Coacervation</span>
+        <span class="badge">Liquid Crystals</span>
+        <span class="badge">Phase Separation</span>
+        <span class="badge">Protein Condensates</span><br>
+        <strong>Applications:</strong> Artificial organelles, biosensors, smart materials.<br>
+        <strong>Techniques:</strong> PLM, Microrheology, SAXS/WAXS.<br>
+        We investigate how biomolecules spontaneously organize into liquid-like phases with tunable properties.
+      </p>
+    </details>
+
+    <details>
+      <summary>⚗️ Hybrid and Framework Materials</summary>
+      <p>
+        <strong>Keywords:</strong>
+        <span class="badge">MOFs</span>
+        <span class="badge">COFs</span>
+        <span class="badge">Coordination Polymers</span><br>
+        <strong>Applications:</strong> Catalysis, gas storage, environmental sensing.<br>
+        <strong>Techniques:</strong> PXRD, BET, IR, Thermal Analysis.<br>
+        These porous, crystalline materials provide molecular-level design for chemical transformations and separations.
+      </p>
+    </details>
+
+    <details>
+      <summary>🌱 Sustainable Nanotechnologies</summary>
+      <p>
+        <strong>Keywords:</strong>
+        <span class="badge">Mn-Phosphate Nanosheets</span>
+        <span class="badge">Foliar Fertilizers</span>
+        <span class="badge">Green Nanochemistry</span><br>
+        <strong>Applications:</strong> Sustainable agriculture, micronutrient delivery, water remediation.<br>
+        <strong>Techniques:</strong> TOF-SIMS, LA-ICP-MS, ICP-OES, Raman imaging.<br>
+        We design biocompatible nanomaterials to address pressing agricultural and environmental needs.
+      </p>
+    </details>
+
+    <h3>Techniques I Use</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        🔬 <strong>Biophysical</strong><br>
+        FRAP, Optical Tweezers, Circular Dichroism, NMR
+      </div>
+      <div class="tech-card">
+        🖼️ <strong>Imaging</strong><br>
+        Cryo-EM, TEM, SEM, PLM
+      </div>
+      <div class="tech-card">
+        📈 <strong>Spectroscopy</strong><br>
+        Raman, UV-Vis, FTIR
+      </div>
+      <div class="tech-card">
+        ⚗️ <strong>Analytical</strong><br>
+        TOF-SIMS, LA-ICP-MS, ICP-MS/OES
+      </div>
+      <div class="tech-card">
+        🧪 <strong>Synthetic</strong><br>
+        Protein Engineering, Coacervate Formation, Metal-Organic Synthesis
+      </div>
+    </div>
   </section>
 
   <section id="publications">
