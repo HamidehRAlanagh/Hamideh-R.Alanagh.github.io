@@ -1,3 +1,56 @@
+✅ Excellent—now we’re *really* designing like a **real lab site!**
+
+You want:
+
+🌿 1️⃣ Video background hero section *filling the viewport* (like Obermeyer Lab)
+🌿 2️⃣ Welcome text *overlaid on top* (cleanly visible)
+🌿 3️⃣ A **fixed header bar** at top with:
+
+* **Logo** (your PNG image) at top left
+* **Nature × Matter** text next to it
+* Nav links on the right
+
+✅ All in a clean, modern lab-style layout.
+
+---
+
+## ✅ ⭐ DESIGN PLAN
+
+We’ll do **3 parts**:
+
+✅ Header (fixed):
+
+* Left: your logo + “Nature × Matter” text
+* Right: nav links
+
+✅ Hero Section:
+
+* Full-screen video background (fills 100vh)
+* Welcome overlay text *centered on top of the video*
+
+✅ Clean CSS with good fonts, contrast, modern colors.
+
+---
+
+## ✅ ⭐ Your Logo Image
+
+You already have:
+
+```
+nature-x-matter-logo.png
+```
+
+We’ll use this in the header!
+
+---
+
+## ✅ 📌 READY-TO-PASTE FULL `index.html` CODE
+
+Below is **complete**, modern, and deployable on GitHub Pages.
+
+---
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,35 +77,46 @@
 
     /* HEADER */
     header {
-      background-color: #ffffff;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 1000;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid #ddd;
     }
 
     .header-container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 1rem 2rem;
+      padding: 0.8rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
+      display: flex;
+      align-items: center;
       text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .brand img {
+      height: 40px;
+      margin-right: 0.8rem;
     }
 
     nav a {
-      margin-left: 1.5rem;
+      margin-left: 1.2rem;
       text-decoration: none;
       color: var(--primary-color);
       font-weight: 500;
       transition: color 0.3s;
+      font-size: 1.05rem;
     }
 
     nav a:hover {
@@ -60,10 +124,10 @@
       text-decoration: underline;
     }
 
-    /* HERO SECTION with Video */
+    /* HERO SECTION WITH VIDEO */
     .hero {
       position: relative;
-      height: 80vh;
+      height: 100vh;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -83,7 +147,7 @@
       z-index: 1;
       transform: translate(-50%, -50%);
       object-fit: cover;
-      opacity: 0.6;
+      opacity: 0.65;
     }
 
     .hero .overlay {
@@ -91,7 +155,7 @@
       z-index: 2;
       max-width: 800px;
       padding: 2rem;
-      background-color: rgba(0, 47, 26, 0.5);
+      background-color: rgba(0, 47, 26, 0.45);
       border-radius: 8px;
     }
 
@@ -106,7 +170,7 @@
       color: #e0e0e0;
     }
 
-    /* SECTIONS */
+    /* REST OF PAGE SECTIONS */
     section {
       max-width: 960px;
       margin: 3rem auto;
@@ -126,7 +190,6 @@
       margin-bottom: 1rem;
     }
 
-    /* RESEARCH THEMES SECTION */
     .themes {
       background-color: var(--light-section);
       padding: 4rem 2rem;
@@ -170,28 +233,15 @@
       font-size: 0.95rem;
       color: #444;
     }
-
-    a.button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.6rem 1.2rem;
-      background-color: var(--secondary-color);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-      font-size: 1rem;
-    }
-
-    a.button:hover {
-      background-color: #388e3c;
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="header-container">
-      <a href="index.html" class="brand">Nature × Matter</a>
+      <a href="index.html" class="brand">
+        <img src="nature-x-matter-logo.png" alt="Nature × Matter Logo">
+        Nature × Matter
+      </a>
       <nav>
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
@@ -210,7 +260,7 @@
     <div class="overlay">
       <h1>Welcome to Nature × Matter</h1>
       <p>
-        Enabling nature-inspired solutions for challenges in health, sustainability, and the environment.
+        Enabling nature-inspired solutions for health, sustainability, and the environment.
       </p>
     </div>
   </section>
@@ -237,29 +287,5 @@
       <div class="theme-card">
         <h3>Self-Assembled Soft Matter</h3>
         <p>
-          Exploring phase separation, liquid crystals, and condensates to mimic biological compartmentalization.
-        </p>
-      </div>
-      <div class="theme-card">
-        <h3>Sustainable Nanotechnologies</h3>
-        <p>
-          Developing eco-friendly nanomaterials for agriculture, micronutrient delivery, and water remediation.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Nature × Matter | Hamideh R. Alanagh
-  </footer>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
+          Exploring phase separation, liquid crystals, and condensates to mimic biological compartmental
+```
