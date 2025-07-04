@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nature × Matter</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature × Matter - Research</title>
   <style>
     body {
       margin: 0;
@@ -11,6 +11,7 @@
       background-color: #fefcf8;
       color: #1f3b2c;
     }
+
     header {
       background-color: #fefcf8;
       padding: 1rem 2rem;
@@ -18,29 +19,41 @@
       align-items: center;
       border-bottom: 1px solid #ddd;
     }
+
     header img {
       height: 60px;
       margin-right: 1rem;
     }
+
     header h1 {
       font-size: 1.8rem;
       margin: 0;
       color: #1a3d2d;
     }
+
     nav {
       margin-left: auto;
     }
+
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
       color: #1a3d2d;
       font-weight: 500;
+      transition: color 0.3s;
     }
+
+    nav a:hover {
+      color: #3b6b50;
+      text-decoration: underline;
+    }
+
     section {
       padding: 3rem 2rem;
       max-width: 960px;
       margin: auto;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -49,41 +62,67 @@
       color: #444;
     }
 
-    /* New styles for research section */
+    /* Fancy Research Styles */
     details {
       border: 1px solid #ccc;
       border-radius: 6px;
       padding: 0.5rem 1rem;
       margin-bottom: 1rem;
       background-color: #fff;
+      transition: box-shadow 0.3s;
     }
+
+    details[open] {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
     details summary {
       font-weight: bold;
       cursor: pointer;
       padding: 0.5rem 0;
       color: #1a3d2d;
+      user-select: none;
+      transition: color 0.3s;
     }
+
+    details summary:hover {
+      color: #3b6b50;
+    }
+
     .badge {
       display: inline-block;
       background-color: #4CAF50;
       color: white;
-      padding: 2px 8px;
+      padding: 4px 10px;
       margin: 2px;
       border-radius: 12px;
       font-size: 0.85em;
+      transition: background-color 0.3s;
     }
+
+    .badge:hover {
+      background-color: #388e3c;
+    }
+
     .tech-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       margin-top: 2rem;
     }
+
     .tech-card {
       flex: 1 1 200px;
       border: 1px solid #ccc;
-      padding: 10px;
+      padding: 14px;
       border-radius: 8px;
       background-color: #fff;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .tech-card:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transform: translateY(-3px);
     }
   </style>
 </head>
@@ -92,19 +131,14 @@
     <img src="nature-x-matter-logo.png" alt="Nature × Matter logo">
     <h1>Nature × Matter</h1>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#outreach">Outreach / EDI</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="outreach.html">Outreach / EDI</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-
-  <section id="home">
-    <h2>Welcome</h2>
-    <p>Nature × Matter explores how biological principles can inspire new materials that respond, regenerate, and sustain life. Led by Hamideh Rezvani Alanagh, our work bridges chemistry, soft matter physics, and sustainability-driven biomaterials design.</p>
-  </section>
 
   <section id="research">
     <h2>Research</h2>
@@ -191,29 +225,9 @@
     </div>
   </section>
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <p>Selected peer-reviewed articles and preprints will be listed here.</p>
-  </section>
-
-  <section id="teaching">
-    <h2>Teaching</h2>
-    <p>Courses taught and teaching philosophy focused on active learning, inclusivity, and critical thinking.</p>
-  </section>
-
-  <section id="outreach">
-    <h2>Outreach / EDI</h2>
-    <p>We value equity, diversity, and inclusion in science and education, and engage in community events, mentoring, and accessible science communication.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: hamideh.rezvanialanagh@mail.mcgill.ca<br>
-    LinkedIn: linkedin.com/in/hamideh-rezvani</p>
-  </section>
-
   <footer>
     &copy; 2025 Nature × Matter | Hamideh R. Alanagh
   </footer>
 </body>
 </html>
+
