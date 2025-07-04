@@ -60,24 +60,50 @@
       text-decoration: underline;
     }
 
-    /* HERO SECTION */
+    /* HERO SECTION with Video */
     .hero {
-      background-color: var(--light-section);
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 5rem 2rem 4rem;
+      color: white;
     }
 
-    .hero h1 {
+    .hero video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      opacity: 0.6;
+    }
+
+    .hero .overlay {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 2rem;
+      background-color: rgba(0, 47, 26, 0.5);
+      border-radius: 8px;
+    }
+
+    .hero .overlay h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: var(--primary-color);
+      color: #ffffff;
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto;
+    .hero .overlay p {
       font-size: 1.3rem;
-      color: #3b6b50;
+      color: #e0e0e0;
     }
 
     /* SECTIONS */
@@ -100,7 +126,7 @@
       margin-bottom: 1rem;
     }
 
-    /* RESEARCH THEMES */
+    /* RESEARCH THEMES SECTION */
     .themes {
       background-color: var(--light-section);
       padding: 4rem 2rem;
@@ -178,10 +204,15 @@
   </header>
 
   <section class="hero">
-    <h1>Welcome to Nature × Matter</h1>
-    <p>
-      Enabling nature-inspired solutions for challenges in health, sustainability, and the environment.
-    </p>
+    <video autoplay muted loop playsinline>
+      <source src="background.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h1>Welcome to Nature × Matter</h1>
+      <p>
+        Enabling nature-inspired solutions for challenges in health, sustainability, and the environment.
+      </p>
+    </div>
   </section>
 
   <section>
@@ -223,6 +254,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
