@@ -4,7 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | Nature × Matter Lab</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #333;
+    }
+    header {
+      background-color: #111;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    section h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+    section p {
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+    ul.subpages {
+      margin-top: 10px;
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul.subpages li {
+      margin-top: 6px;
+    }
+    ul.subpages li a {
+      text-decoration: none;
+      color: #555;
+    }
+    ul.subpages li a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,41 +72,77 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
-      <a href="people.html">People</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
+      <a href="news.html">News/Updates</a>
+      <a href="teaching.html">Teaching & Mentorship</a>
+      <a href="art.html">Art</a>
     </nav>
   </header>
 
-  <main class="content">
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am an interdisciplinary scientist with a background in physical chemistry, biomaterials, and environmental chemistry. My work spans reticular chemistry, protein-based coacervates, and sustainable materials design. I am passionate about using fundamental chemistry to address challenges in green technology, nanoscience, and environmental stewardship.
+      </p>
+    </section>
+
     <section>
       <h2>Research Overview</h2>
-      <p>Our lab studies the molecular design of sustainable, adaptive materials inspired by nature. We integrate physical chemistry, spectroscopy, and materials science to address challenges in catalysis, energy storage, and environmental sustainability.</p>
+      <p>
+        Our lab explores the molecular design of sustainable, adaptive materials inspired by nature. We focus on understanding sequence–structure–function relationships in complex coacervates to engineer programmable soft materials for catalysis, energy storage membranes, coatings, and separations.
+      </p>
     </section>
 
     <section>
       <h2>Bio-Inspired Coacervate Materials</h2>
-      <p>We engineer stimuli-responsive protein–nucleic acid coacervates by understanding sequence–structure–function relationships. These soft materials enable controlled microenvironments and adaptive phase behavior, with applications in catalysis, separations, coatings, and energy storage membranes.</p>
+      <p>
+        We design stimuli-responsive protein–nucleic acid coacervates with tunable properties. Our work links molecular sequence design to phase behavior and function, enabling adaptive materials with controlled microenvironments and responsive transitions.
+      </p>
+      <ul class="subpages">
+        <li><a href="bioinspired-coacervates.html">Overview</a></li>
+        <li><a href="sequence-structure-function.html">Sequence–Structure–Function Design</a></li>
+        <li><a href="coacervate-proposal.html">Detailed Research Plan</a></li>
+      </ul>
     </section>
 
     <section>
-      <h2>Reticular Chemistry</h2>
-      <p>My doctoral research focused on reticular chemistry, designing porous molecular frameworks with precise connectivity and tunable host–guest interactions. This foundation informs our approach to controlling coacervate architecture at the molecular level.</p>
+      <h2>PhD Research: Reticular Chemistry</h2>
+      <p>
+        My doctoral work focused on reticular chemistry, building porous frameworks with precise connectivity and tunable host–guest interactions. These principles inform our approach to designing coacervate architectures with controlled properties.
+      </p>
+      <ul class="subpages">
+        <li><a href="reticular-chemistry.html">Reticular Chemistry Page</a></li>
+      </ul>
     </section>
 
     <section>
-      <h2>Environmental Chemistry</h2>
-      <p>I have developed nanoparticle delivery systems for sustainable agriculture, including environmentally benign foliar nutrient carriers. This experience highlights my commitment to applying materials design to real-world environmental challenges.</p>
+      <h2>Postdoctoral Work: Environmental Chemistry</h2>
+      <p>
+        My research also includes nanoparticle delivery systems for sustainable agriculture, emphasizing environmentally responsible nutrient delivery with advanced materials. This work connects materials design to practical environmental applications.
+      </p>
+      <ul class="subpages">
+        <li><a href="environmental-chemistry.html">Environmental Chemistry Page</a></li>
+      </ul>
     </section>
 
     <section>
       <h2>Methods & Tools</h2>
-      <p>Our work combines advanced synthetic strategies with state-of-the-art characterization techniques, including AFM-Raman spectroscopy, TOF-SIMS, NMR, optical tweezers microrheology, and cryo-EM. These tools enable us to probe materials across length scales and connect molecular design to function.</p>
+      <p>
+        We employ advanced physical and biophysical characterization techniques to probe coacervate materials across scales. Our toolkit includes:
+      </p>
+      <ul class="subpages">
+        <li><a href="methods/afm-raman.html">AFM-Raman Spectroscopy</a></li>
+        <li><a href="methods/tof-sims.html">TOF-SIMS</a></li>
+        <li><a href="methods/nmr.html">NMR Spectroscopy</a></li>
+        <li><a href="methods/optical-tweezers.html">Optical Tweezers Microrheology</a></li>
+        <li><a href="methods/cryo-em.html">Cryo-EM</a></li>
+      </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; Nature × Matter Lab</p>
+  <footer style="text-align:center; padding:20px; background-color:#111; color:#aaa;">
+    &copy; Nature × Matter Lab
   </footer>
 </body>
 </html>
+
