@@ -3,44 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nature × Matter - Home</title>
+  <title>Nature × Matter Lab</title>
   <style>
-    :root {
-      --overlay-bg: rgba(0, 47, 26, 0.5);
-      --text-color: #ffffff;
-    }
-
-    body, html {
+    /* Reset and Base Styles */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
+      font-family: Arial, sans-serif;
     }
 
-    /* HEADER WITH LOGO ONLY */
-    header {
-      background-color: #ffffff;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    header img {
-      height: 80px;
-      max-height: 12vh;
-    }
-
-    /* HERO SECTION WITH FULL VIDEO */
-    .hero {
+    /* Video Background */
+    .video-container {
       position: relative;
-      height: 90vh;
       width: 100%;
+      height: 100vh;
       overflow: hidden;
     }
 
-    .hero video {
+    .video-container video {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -48,101 +33,94 @@
       min-height: 100%;
       width: auto;
       height: auto;
+      z-index: -2;
       transform: translate(-50%, -50%);
       object-fit: cover;
-      opacity: 0.65;
-      z-index: 0;
     }
 
-    .hero .overlay {
+    .overlay {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    /* Centered Content */
+    .content {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      background-color: var(--overlay-bg);
-      padding: 2rem 3rem;
-      border-radius: 12px;
-      z-index: 2;
-      max-width: 90%;
+      color: #ffffff;
+      padding: 20px;
     }
 
-    .hero .overlay h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      color: var(--text-color);
+    .content img.logo {
+      max-width: 150px;
+      margin-bottom: 20px;
     }
 
-    .hero .overlay p {
-      font-size: 1.3rem;
-      color: #e0e0e0;
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    section {
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background-color: #fefcf8;
-      color: #1a3d2d;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    .content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+      line-height: 1.4;
     }
 
-    section h2 {
-      font-size: 2rem;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 0.3rem;
-      margin-top: 0;
+    .button {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
-    section p {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.8;
+    .button:hover {
+      background-color: #dddddd;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f3f3ed;
-      font-size: 0.95rem;
-      color: #444;
+    @media (max-width: 600px) {
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .content img.logo {
+        max-width: 120px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- HEADER: LOGO ONLY -->
-  <header>
-    <img src="nature-x-matter-logo.png" alt="Nature × Matter Logo">
-  </header>
-
-  <!-- HERO VIDEO BELOW HEADER -->
-  <section class="hero">
+  <div class="video-container">
     <video autoplay muted loop playsinline>
-      <source src="background.mp4" type="video/mp4">
+      <source src="assets/video/background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
     </video>
-    <div class="overlay">
-      <h1>Welcome to Nature × Matter</h1>
-      <p>
-        Enabling nature-inspired solutions for health, sustainability, and the environment.
-      </p>
+    <div class="overlay"></div>
+    <div class="content">
+      <img src="assets/images/logo.png" alt="Nature × Matter Lab Logo" class="logo" />
+      <h1>Nature × Matter Lab</h1>
+      <p>Bridging Nature and Matter for Sustainable Innovation</p>
+      <a href="research.html" class="button">Explore Our Research</a>
     </div>
-  </section>
-
-  <section>
-    <h2>About Our Lab</h2>
-    <p>
-      Nature × Matter bridges chemistry, biology, and materials science to design dynamic, sustainable solutions. Led by Hamideh Rezvani Alanagh, our work focuses on creating materials that respond, adapt, and support life in meaningful ways.
-    </p>
-    <p>
-      We study biomolecular assemblies, engineer responsive scaffolds, and apply advanced characterization to understand and control soft matter systems. From therapeutics and diagnostics to sustainable agriculture and water treatment, we believe that learning from nature enables us to build a better future.
-    </p>
-  </section>
-
-  <footer>
-    &copy; 2025 Nature × Matter | Hamideh R. Alanagh
-  </footer>
+  </div>
 </body>
 </html>
