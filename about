@@ -3,107 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nature × Matter - About Me</title>
+  <title>About Me | Nature × Matter Lab</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fefcf8;
-      color: #1f3b2c;
-      line-height: 1.7;
-      font-size: 1.05rem;
+      background-color: #fafafa;
+      color: #333;
     }
-
     header {
-      background-color: #fefcf8;
-      padding: 1rem 2rem;
+      background-color: #111;
+      padding: 15px 20px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #ddd;
     }
-
-    header img {
-      height: 80px;
+    header h1 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0;
     }
-
-    nav {
-      margin-left: auto;
-    }
-
     nav a {
-      margin-left: 1.5rem;
+      color: #ddd;
       text-decoration: none;
-      color: #1a3d2d;
-      font-weight: 500;
-      transition: color 0.3s;
+      margin-left: 20px;
+      font-size: 1rem;
     }
-
     nav a:hover {
-      color: #3b6b50;
-      text-decoration: underline;
+      color: #fff;
     }
-
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
     section {
-      padding: 3rem 2rem;
-      max-width: 960px;
-      margin: auto;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 50px;
     }
-
-    h2 {
-      color: #2e5b43;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 0.3rem;
-      margin-top: 0;
+    section h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      margin-top: 40px;
     }
-
-    p {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f3f3ed;
-      font-size: 0.9rem;
-      color: #444;
+    section p {
+      line-height: 1.6;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="nature-x-matter-logo.png" alt="Nature × Matter logo">
+    <h1>Nature × Matter Lab</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="outreach.html">Outreach / EDI</a>
+      <a href="teaching.html">Teaching & Mentorship</a>
+      <a href="news.html">News/Updates</a>
+      <a href="art.html">Art</a>
       <a href="about.html">About Me</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm Hamideh Rezvani Alanagh, a researcher passionate about creating nature-inspired materials that address challenges in health and the environment.
-    </p>
-    <p>
-      My work bridges chemistry, soft matter physics, and biomaterials science to design dynamic, sustainable solutions. From studying biomolecular assemblies to engineering responsive materials for therapeutics, agriculture, and water treatment, I focus on how understanding nature can help us build a better world.
-    </p>
-    <p>
-      Feel free to connect with me:
-      <br>
-      📧 Email: <a href="mailto:hamideh.rezvanialanagh@mail.mcgill.ca">hamideh.rezvanialanagh@mail.mcgill.ca</a><br>
-      🔗 LinkedIn: <a href="https://linkedin.com/in/hamideh-rezvani">linkedin.com/in/hamideh-rezvani</a>
-    </p>
-  </section>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am an interdisciplinary scientist focused on the molecular design of sustainable materials. My work integrates physical chemistry, biomaterials, and environmental chemistry to develop adaptive systems inspired by nature’s own strategies.
+      </p>
+      <p>
+        My research explores the sequence–structure–function relationships in complex coacervates, aiming to create tunable, stimuli-responsive materials for catalysis, energy storage, separations, and coatings.
+      </p>
+    </section>
 
-  <footer>
-    &copy; 2025 Nature × Matter | Hamideh R. Alanagh
+    <section>
+      <h2>Academic Journey</h2>
+      <p>
+        I completed a PhD specializing in reticular chemistry, developing porous frameworks with designed connectivity and tunable host–guest interactions. My postdoctoral work transitioned to soft matter science, investigating protein–nucleic acid coacervates, hierarchical materials, and environmentally responsible delivery systems for agriculture.
+      </p>
+      <p>
+        This background supports a holistic approach to materials design, bridging experimental physical chemistry, biophysical characterization, and applications in green technology.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research Vision</h2>
+      <p>
+        My long-term vision is to advance sustainable materials science through deep understanding of molecular interactions and phase behavior. I am committed to training students in advanced spectroscopy and nanoscience, fostering interdisciplinary collaboration, and developing environmentally responsible solutions.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        For collaboration, mentorship inquiries, or more information about our research, please feel free to get in touch via email. (You can add your email link here.)
+      </p>
+    </section>
+  </main>
+
+  <footer style="text-align:center; padding:20px; background-color:#111; color:#aaa;">
+    &copy; Nature × Matter Lab
   </footer>
 </body>
 </html>
