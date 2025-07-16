@@ -64,255 +64,15 @@
     ul.subpages li a:hover {
       text-decoration: underline;
     }
-    
-    /* Media placeholder styles */
-    .media-placeholder {
-      background-color: #f5f5f5;
-      border: 2px dashed #ddd;
-      border-radius: 8px;
-      padding: 40px;
-      text-align: center;
-      color: #666;
-      margin: 20px 0;
-      font-style: italic;
-    }
-    
-    /* Timeline Styles */
-    .timeline-container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin: 20px 0;
-    }
-    
-    .timeline {
-      position: relative;
-      max-width: 100%;
-      margin: 0 auto;
-    }
-    
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 3px;
-      background: linear-gradient(to bottom, #3498db, #2ecc71, #f39c12, #e74c3c);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -1.5px;
-    }
-    
-    .timeline-item {
-      position: relative;
-      background-color: inherit;
-      width: 50%;
-      margin: 30px 0;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    
-    .timeline-item:hover {
-      transform: translateY(-2px);
-    }
-    
-    .timeline-item.left {
-      left: 0;
-      padding-right: 30px;
-    }
-    
-    .timeline-item.right {
-      left: 50%;
-      padding-left: 30px;
-    }
-    
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      background: white;
-      border: 3px solid;
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    
-    .timeline-item.left::after {
-      right: -11px;
-    }
-    
-    .timeline-item.right::after {
-      left: -11px;
-    }
-    
-    .past::after {
-      border-color: #3498db;
-    }
-    
-    .current::after {
-      border-color: #2ecc71;
-      animation: pulse 2s infinite;
-    }
-    
-    .future::after {
-      border-color: #f39c12;
-    }
-    
-    .timeline-content {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-left: 4px solid #eee;
-    }
-    
-    .timeline-item.past .timeline-content {
-      border-left-color: #3498db;
-    }
-    
-    .timeline-item.current .timeline-content {
-      border-left-color: #2ecc71;
-    }
-    
-    .timeline-item.future .timeline-content {
-      border-left-color: #f39c12;
-    }
-    
-    .timeline-year {
-      font-size: 0.9em;
-      font-weight: bold;
-      color: #666;
-      margin-bottom: 5px;
-    }
-    
-    .timeline-title {
-      font-size: 1.1em;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 8px;
-    }
-    
-    .timeline-description {
-      color: #666;
-      line-height: 1.5;
-      font-size: 0.9em;
-    }
-    
-    .timeline-status {
-      font-size: 0.8em;
-      padding: 3px 8px;
-      border-radius: 10px;
-      font-weight: 500;
-      display: inline-block;
-      margin-top: 8px;
-    }
-    
-    .published {
-      background: #d4edda;
-      color: #155724;
-    }
-    
-    .submitted {
-      background: #fff3cd;
-      color: #856404;
-    }
-    
-    .in-prep {
-      background: #f8d7da;
-      color: #721c24;
-    }
-    
-    .future-work {
-      background: #e2e3e5;
-      color: #495057;
-    }
-    
-    .phase-label {
-      text-align: center;
-      font-size: 1.2em;
-      font-weight: 600;
-      color: #333;
-      margin: 40px 0 20px 0;
-      position: relative;
-    }
-    
-    .phase-label::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -8px;
-      width: 40px;
-      height: 2px;
-      background: linear-gradient(to right, #3498db, #2ecc71);
-    }
-    
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
+    img.modal-image {
       width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    
-    .modal-content {
-      background-color: #fefefe;
-      margin: 5% auto;
-      padding: 30px;
-      border: none;
-      width: 80%;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      max-height: 80vh;
-      overflow-y: auto;
-    }
-    
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    
-    .close:hover {
-      color: #000;
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-    
-    /* Responsive design */
-    @media screen and (max-width: 768px) {
-      .timeline::after {
-        left: 31px;
-      }
-      
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-      
-      .timeline-item.left, .timeline-item.right {
-        left: 0;
-      }
-      
-      .timeline-item::after {
-        left: 22px;
-      }
+      max-width: 500px;
+      border-radius: 8px;
+      margin: 20px 0;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Nature × Matter Lab</h1>
@@ -335,136 +95,19 @@
       </p>
       <ul class="subpages">
         <li><a href="bioinspired-coacervates.html">Overview</a></li>
-        <li><a href="sequence-structure-function.html">Sequence–Structure–Function Design</a></li>
+        <li><a href="sequence-structure-function.html"><strong>Sequence–Structure–Function Design</strong></a></li>
         <li><a href="coacervate-proposal.html">Detailed Research Plan</a></li>
       </ul>
     </section>
 
     <section>
-      <h2>Research Timeline</h2>
+      <h2>Review Works</h2>
       <p>
-        Explore my research journey from foundational discoveries to future innovations. Click on any timeline item to read detailed information about that research phase.
-      </p>
-      
-      <div class="timeline-container">
-        <div class="timeline">
-          <div class="phase-label">Foundation Research on Protein Condensates (2022-2024)</div>
-          
-          <div class="timeline-item left past" onclick="openModal('vesicle-modal')">
-            <div class="timeline-content">
-              <div class="timeline-year">2022-2024</div>
-              <div class="timeline-title">Native Mussel Foot Protein Vesicle Mechanics</div>
-              <div class="timeline-description">
-                Separated native vesicles from mussel foot glands (core, cuticle, and plaque) and developed optical tweezers method to measure mechanics varying with pH and force orientation.
-              </div>
-              <div class="timeline-status published">Published</div>
-            </div>
-          </div>
-
-          <div class="media-placeholder">
-            [Picture/Video Placeholder: Native Mussel Foot Protein Vesicles - Core, Cuticle, and Plaque Mechanics]
-          </div>
-          
-          <div class="timeline-item right past" onclick="openModal('mfp-modal')">
-            <div class="timeline-content">
-              <div class="timeline-year">2023-2024</div>
-              <div class="timeline-title">Mussel Foot Protein (MFP) Coacervates</div>
-              <div class="timeline-description">
-                Discovered how multivalent sulfate ions alter phase boundaries and increase coacervate stiffness using optical tweezers and FRAP.
-              </div>
-              <div class="timeline-status published">Published - Chemistry of Materials, 2025</div>
-            </div>
-          </div>
-          
-          <div class="timeline-item left past" onclick="openModal('cellulose-modal')">
-            <div class="timeline-content">
-              <div class="timeline-year">2024</div>
-              <div class="timeline-title">Protein–Cellulose Condensates</div>
-              <div class="timeline-description">
-                Developed salt-free porous structures through electrostatic interactions with AFM-Raman mapping revealing anisotropic interfaces.
-              </div>
-              <div class="timeline-status submitted">Submitted 2025</div>
-            </div>
-          </div>
-          
-          <div class="timeline-item right current" onclick="openModal('dna-modal')">
-            <div class="timeline-content">
-              <div class="timeline-year">2024-2025</div>
-              <div class="timeline-title">MFP–DNA Complex Coacervates</div>
-              <div class="timeline-description">
-                Investigated sequence-specific interactions affecting phase stability and demonstrated sequence-dependent cargo control.
-              </div>
-              <div class="timeline-status in-prep">In preparation</div>
-            </div>
-          </div>
-          
-          <div class="phase-label">Proposed Research Program (2026-2031)</div>
-          
-          <div class="timeline-item left future" onclick="openModal('tunable-modal')">
-            <div class="timeline-content">
-              <div class="timeline-year">2026-2027</div>
-              <div class="timeline-title">Tunable Coacervate Materials</div>
-              <div class="timeline-description">
-                Synthesize protein–nucleic acid coacervates with precisely controlled properties for selective cargo applications.
-              </div>
-              <div class="timeline-status future-work">Proposed Research</div>
-            </div>
-          </div>
-          
-          <div class="timeline-item right future" onclick="openModal('confined-modal')">
-            <div class="timeline-content">
-              <div class="timeline-year">2027-2028</div>
-              <div class="timeline-title">Confined Chemical Environments</div>
-              <div class="timeline-description">
-                Explore molecular crowding effects on reaction kinetics and enzymatic activity for confined catalysis applications.
-              </div>
-              <div class="timeline-status future-work">Proposed Research</div>
-            </div>
-          </div>
-          
-          <div class="timeline-item left future" onclick="openModal('stimuli-modal')">
-            <div class="timeline-content">
-              <div class="timeline-year">2028-2029</div>
-              <div class="timeline-title">Stimuli-Responsive Systems</div>
-              <div class="timeline-description">
-                Design coacervates responding to pH, ionic strength, and light for adaptable smart materials.
-              </div>
-              <div class="timeline-status future-work">Proposed Research</div>
-            </div>
-          </div>
-          
-          <div class="timeline-item right future" onclick="openModal('synthetic-modal')">
-            <div class="timeline-content">
-              <div class="timeline-year">2029-2031</div>
-              <div class="timeline-title">Synthetic Cell Integration</div>
-              <div class="timeline-description">
-                Integrate coacervates as artificial organelles for compartmentalized reactivity and hierarchical assembly.
-              </div>
-              <div class="timeline-status future-work">Proposed Research</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>PhD Research: Reticular Chemistry</h2>
-      <p>
-        My doctoral work focused on reticular chemistry, building porous frameworks with precise connectivity and tunable host–guest interactions. These principles inform our approach to designing coacervate architectures with controlled properties.
+        Beyond original research, I am committed to synthesizing and communicating emerging knowledge. I am finalizing a comprehensive review on peptide–nucleic acid coacervates as programmable biomimetic materials, and contributing to an international collaborative review on advanced experimental and computational techniques for studying complex coacervates.
       </p>
       <ul class="subpages">
-        <li><a href="reticular-chemistry.html">Reticular Chemistry Page</a></li>
-        <li><a href="phd-research.html">PhD Research Details</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Postdoctoral Work: Environmental Chemistry</h2>
-      <p>
-        My research also includes nanoparticle delivery systems for sustainable agriculture, emphasizing environmentally responsible nutrient delivery with advanced materials. This work connects materials design to practical environmental applications.
-      </p>
-      <ul class="subpages">
-        <li><a href="environmental-chemistry.html">Environmental Chemistry Page</a></li>
+        <li><a href="peptide-nucleic-review.html">Peptide–Nucleic Acid Coacervates Review</a></li>
+        <li><a href="techniques-review.html">Advanced Techniques Review (International Collaboration)</a></li>
       </ul>
     </section>
 
@@ -487,104 +130,16 @@
     &copy; Nature × Matter Lab
   </footer>
 
-  <!-- Modals -->
-  <div id="vesicle-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('vesicle-modal')">&times;</span>
-      <h2>Native Mussel Foot Protein Vesicle Mechanics</h2>
-      <p><strong>Research Period:</strong> 2022-2024</p>
-      <p><strong>Status:</strong> Published</p>
-      <p>This foundational work involved separating native vesicles from mussel foot glands, specifically identifying and isolating core, cuticle, and plaque vesicles. I developed an optical tweezers method to measure the mechanical properties of these vesicles, revealing how their mechanics change as a function of pH and the orientation of applied force.</p>
-      <p>The study provided crucial insights into the natural mechanical properties of mussel foot protein vesicles and how environmental conditions affect their behavior. This work established the foundation for understanding the mechanical adaptability of natural protein-based materials.</p>
-      <p><strong>Key Techniques:</strong> Optical tweezers microrheology, vesicle separation, pH-dependent mechanics</p>
-      <p><strong>Impact:</strong> Established baseline understanding of native mussel foot protein vesicle mechanics</p>
-    </div>
-  </div>
-
+  <!-- Example Modal with Image -->
   <div id="mfp-modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('mfp-modal')">&times;</span>
       <h2>Mussel Foot Protein (MFP) Coacervates</h2>
+      <img class="modal-image" src="images/mfp-coacervate.jpg" alt="MFP Coacervate Image">
       <p><strong>Research Period:</strong> 2023-2024</p>
       <p><strong>Status:</strong> Published in Chemistry of Materials, 2025</p>
-      <p>This foundational work demonstrated how varying ionic conditions, specifically using multivalent sulfate ions, alters phase boundaries and increases coacervate stiffness and concentration. I measured these effects with optical tweezers microrheology, which provides mechanical measurements at the single-droplet level, and FRAP, which tracks molecular mobility inside the coacervate.</p>
-      <p>These measurements demonstrated that mechanical properties can be adjusted across a range of values, supporting processing applications such as fiber formation and coatings. This work established the foundation for understanding how ionic environments control coacervate properties.</p>
-      <p><strong>Key Techniques:</strong> Optical tweezers microrheology, FRAP, single-droplet analysis</p>
-      <p><strong>Impact:</strong> Established tunability principles for coacervate mechanical properties</p>
-    </div>
-  </div>
-
-  <div id="cellulose-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('cellulose-modal')">&times;</span>
-      <h2>Protein–Cellulose Condensates</h2>
-      <p><strong>Research Period:</strong> 2024</p>
-      <p><strong>Status:</strong> Submitted 2025, Presented at CSC 2025 Ottawa</p>
-      <p>I developed protein–cellulose condensates that form porous structures without added salts. These assemblies rely on electrostatic and hydrogen-bonding interactions. Using AFM-Raman spectroscopy, I mapped chemical and mechanical properties, showing anisotropic, permeable interfaces.</p>
-      <p>Cryo-EM imaging confirmed consistent nanoscale architectures. This work demonstrates how different interaction mechanisms can create distinct structural features in coacervate systems, expanding the toolkit for materials design.</p>
-      <p><strong>Key Techniques:</strong> AFM-Raman spectroscopy, Cryo-EM, chemical mapping</p>
-      <p><strong>Impact:</strong> Demonstrated salt-free assembly pathways for porous materials</p>
-    </div>
-  </div>
-
-  <div id="dna-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('dna-modal')">&times;</span>
-      <h2>MFP–DNA Complex Coacervates</h2>
-      <p><strong>Research Period:</strong> 2024-2025</p>
-      <p><strong>Status:</strong> In preparation, Presented at CSC 2025 Ottawa</p>
-      <p>In studies of MFP–DNA complex coacervates, I examined how sequence-specific electrostatic and hydrophobic interactions affect phase stability and internal fluidity. FRAP measurements showed that internal diffusion rates can change significantly based on sequence design, allowing control over cargo encapsulation and release.</p>
-      <p>I used NMR spectroscopy, Raman, and TOF-SIMS to characterize local chemical environments and interfacial composition. This work demonstrates the potential for sequence-programmable coacervate systems.</p>
-      <p><strong>Key Techniques:</strong> FRAP, NMR spectroscopy, Raman, TOF-SIMS</p>
-      <p><strong>Impact:</strong> Demonstrated sequence-dependent control over coacervate function</p>
-    </div>
-  </div>
-
-  <div id="tunable-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('tunable-modal')">&times;</span>
-      <h2>Tunable Coacervate Materials Design</h2>
-      <p><strong>Proposed Period:</strong> 2026-2027</p>
-      <p><strong>Objective:</strong> Synthesize and characterize protein–nucleic acid coacervates with precisely controlled mechanical, chemical, and structural properties to enable selective cargo encapsulation, targeted release, and tailored functionality in sustainable materials applications.</p>
-      <p><strong>Approach:</strong> Building on our established understanding of ionic effects and sequence-specific interactions, we will develop systematic design rules for creating coacervates with predictable properties.</p>
-      <p><strong>Key Methods:</strong> Recombinant protein expression, automated nucleic acid synthesis, advanced characterization using ToF-SIMS, AFM-Raman, and NMR</p>
-      <p><strong>Expected Impact:</strong> Enable rational design of coacervate materials for specific applications</p>
-    </div>
-  </div>
-
-  <div id="confined-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('confined-modal')">&times;</span>
-      <h2>Confined Chemical Environments</h2>
-      <p><strong>Proposed Period:</strong> 2027-2028</p>
-      <p><strong>Objective:</strong> Explore how molecular crowding within coacervates influences reaction kinetics, enzymatic activity, and molecular interactions, providing insight into confined catalysis and the design of advanced materials.</p>
-      <p><strong>Focus Areas:</strong> Reaction kinetics in confined spaces, enzymatic activity modulation, molecular interaction networks</p>
-      <p><strong>Applications:</strong> Confined catalysis design and advanced materials engineering</p>
-      <p><strong>Expected Impact:</strong> Understanding of how confinement affects chemical reactivity in soft materials</p>
-    </div>
-  </div>
-
-  <div id="stimuli-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('stimuli-modal')">&times;</span>
-      <h2>Stimuli-Responsive Systems</h2>
-      <p><strong>Proposed Period:</strong> 2028-2029</p>
-      <p><strong>Objective:</strong> Design coacervates that respond predictably to environmental factors such as pH, ionic strength, light, or molecular cues to create adaptable, smart materials.</p>
-      <p><strong>Responsive Elements:</strong> pH and ionic strength variations, light-activated switching, molecular recognition events</p>
-      <p><strong>Outcome:</strong> Adaptable, smart materials with programmable behavior</p>
-      <p><strong>Expected Impact:</strong> Enable dynamic, responsive materials for advanced applications</p>
-    </div>
-  </div>
-
-  <div id="synthetic-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('synthetic-modal')">&times;</span>
-      <h2>Synthetic Cell Integration</h2>
-      <p><strong>Proposed Period:</strong> 2029-2031</p>
-      <p><strong>Objective:</strong> Integrate multifunctional coacervates as artificial organelles within synthetic cell platforms to study compartmentalized reactivity, interfacial interactions with lipid membranes, and programmable, hierarchical assembly.</p>
-      <p><strong>Research Areas:</strong> Compartmentalized reactivity studies, interfacial interactions with lipid membranes, programmable hierarchical assembly</p>
-      <p><strong>Significance:</strong> Fundamental insights for functional materials design and synthetic biology</p>
-      <p><strong>Expected Impact:</strong> Bridge materials science and synthetic biology for next-generation applications</p>
+      <p>This foundational work demonstrated how varying ionic conditions, specifically using multivalent sulfate ions, alters phase boundaries and increases coacervate stiffness and concentration. I measured these effects with optical tweezers microrheology and FRAP, which tracks molecular mobility inside the coacervate.</p>
+      <p><strong>Key Techniques:</strong> Optical tweezers microrheology, FRAP</p>
     </div>
   </div>
 
@@ -592,19 +147,8 @@
     function openModal(modalId) {
       document.getElementById(modalId).style.display = 'block';
     }
-    
     function closeModal(modalId) {
       document.getElementById(modalId).style.display = 'none';
-    }
-    
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-      const modals = document.getElementsByClassName('modal');
-      for (let i = 0; i < modals.length; i++) {
-        if (event.target === modals[i]) {
-          modals[i].style.display = 'none';
-        }
-      }
     }
   </script>
 </body>
