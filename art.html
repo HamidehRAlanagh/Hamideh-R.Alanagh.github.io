@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art | Nature × Matter Lab</title>
+  <title>Art & Creative Work | Nature × Matter Lab</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #fafafa;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       background-color: #111;
@@ -32,13 +35,19 @@
     nav a:hover {
       color: #fff;
     }
+    nav a.active {
+      color: #00cc66;
+      font-weight: 600;
+      border-bottom: 2px solid #00cc66;
+    }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
+      flex: 1;
     }
     section {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
     section h2 {
       border-bottom: 2px solid #eee;
@@ -53,13 +62,36 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 30px;
+    }
+    .gallery figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
     }
     .gallery img {
       width: 100%;
       height: auto;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .gallery figcaption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 8px;
+    }
+    .gallery a {
+      text-decoration: none;
+      color: #007acc;
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #fff;
     }
   </style>
 </head>
@@ -72,7 +104,7 @@
       <a href="publications.html">Publications</a>
       <a href="teaching.html">Teaching & Mentorship</a>
       <a href="news.html">News/Updates</a>
-      <a href="art.html">Art</a>
+      <a href="art.html" class="active">Art</a>
       <a href="about.html">About Me</a>
     </nav>
   </header>
@@ -80,25 +112,41 @@
   <main>
     <section>
       <h2>Art & Creative Work</h2>
-      <p>
-        Science and art are deeply connected in my approach to research and design. This section shares my creative work—from sketches and digital art to photography—that explores themes of structure, pattern, and the beauty of natural materials.
-      </p>
+      <p>Art has always found a quiet place alongside my scientific work. Many of these pieces grow out of images I capture during research—especially microscopy—and are shaped by a curiosity for patterns and textures in nature. This gallery isn’t complete, and it’s not meant to be polished. Just a collection of things I enjoy making, and will keep adding to as I go.</p>
+      <p><strong>This page is still in progress. More images and stories coming soon.</strong></p>
     </section>
 
-    <section>
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <img src="art/image1.jpg" alt="Artwork 1">
-        <img src="art/image2.jpg" alt="Artwork 2">
-        <img src="art/image3.jpg" alt="Artwork 3">
-        <img src="art/image4.jpg" alt="Artwork 4">
-      </div>
-      <p style="margin-top: 10px;">*Replace the images above with your own art or photography by uploading them to the <code>art/</code> folder.*</p>
+    <section class="gallery">
+      <figure>
+        <img src="art/artwork1.jpg" alt="Artwork 1">
+        <figcaption>Fractal-inspired protein network</figcaption>
+        <a href="art/artwork1.jpg" target="_blank">Click here to view original image</a>
+      </figure>
+      <figure>
+        <img src="art/artwork2.jpg" alt="Artwork 2">
+        <figcaption>Microscopic leaf textures under polarized light</figcaption>
+        <a href="art/artwork2.jpg" target="_blank">Click here to view original image</a>
+      </figure>
+      <figure>
+        <img src="art/artwork3.jpg" alt="Artwork 3">
+        <figcaption>Phase-separated droplets in a painterly palette</figcaption>
+        <a href="art/artwork3.jpg" target="_blank">Click here to view original image</a>
+      </figure>
+      <figure>
+        <img src="art/artwork4.jpg" alt="Artwork 4">
+        <figcaption>Digital abstraction inspired by coacervate dynamics</figcaption>
+        <a href="art/artwork4.jpg" target="_blank">Click here to view original image</a>
+      </figure>
+      <figure>
+        <img src="art/artwork5.jpg" alt="Artwork 5">
+        <figcaption>An impression of layered material structures</figcaption>
+        <a href="art/artwork5.jpg" target="_blank">Click here to view original image</a>
+      </figure>
     </section>
   </main>
 
-  <footer style="text-align:center; padding:20px; background-color:#111; color:#aaa;">
-    &copy; Nature × Matter Lab
+  <footer>
+    &copy; 2025 Nature × Matter | Hamideh R. Alanagh
   </footer>
 </body>
 </html>
